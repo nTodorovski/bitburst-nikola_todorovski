@@ -1,13 +1,13 @@
 <template>
-  <main class="backlog flex-1">
-    <div class="flex flex-col md:flex-row gap-4 pt-4 px-4 md:px-0">
+  <main class="backlog flex-1 overflow-y-auto">
+    <div class="flex flex-col md:flex-row gap-4 pt-4 px-4 md:px-0 bg-color-white sticky top-0">
       <Input v-model="searchName" placeholder="Search" />
       <div class="flex gap-4 flex-wrap md:flex-nowrap">
         <Button class="md:w-fit flex-1" @click="sortByName">Sort by Name</Button>
         <Button class="md:w-fit flex-1" @click="sortByDate">Sort by Date</Button>
       </div>
     </div>
-    <ul class="mt-4 mx-4 md:mx-0 flex flex-col gap-4">
+    <ul class="py-4 px-4 md:px-0 flex flex-col gap-4">
       <li v-for="todoItem in shownItems" :key="todoItem.id">
         <ToDoItem :todoItem="todoItem">
           <template #optionsadds>

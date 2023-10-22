@@ -49,6 +49,7 @@ export default {
       }
     },
     plugins: [
+      /* eslint-env node */
       require('@tailwindcss/forms')
     ],
   }

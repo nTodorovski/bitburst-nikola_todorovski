@@ -1,5 +1,4 @@
 import ToDoView from '@/views/ToDoView.vue';
-import BacklogView from '@/views/BacklogView.vue';
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
